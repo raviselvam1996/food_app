@@ -1,0 +1,38 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your global CSS file (e.g., index.css) */
+::-webkit-scrollbar {
+  width: 6px; /* Slim scrollbar width */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* Tailwind blue-700 */
+  border-radius: 9999px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #bfdbfe; /* Tailwind blue-300 */
+}
+
+/* Hide scrollbar by default */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Show slim scrollbar on hover */
+.hide-scrollbar:hover::-webkit-scrollbar {
+  width: 6px; /* Slim scrollbar width */
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* Tailwind blue-700 */
+  border-radius: 9999px; /* Rounded edges */
+}
+
+.hide-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent track */
+}
