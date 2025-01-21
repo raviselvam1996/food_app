@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 // import { FormControlLabel, Switch } from '@mui/material';
 import { FaHome, FaUser, FaCog, FaChartBar } from 'react-icons/fa';
-import { Link, Outlet } from 'react-router';
-import { CgProfile } from "react-icons/cg";
-import { IoIosSearch } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
+import {  Outlet } from 'react-router';
 import { SideNavBar } from './SideNavBar';
 import { TopNavBar } from './TopNavBar';
+import CustomForm from '../FormElements/custom-form-elements/CustomForm';
 
 
 
 
 const MainContent = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // const toggleSidebar = () => {
   //   setIsSidebarOpen(!isSidebarOpen);
@@ -46,48 +43,7 @@ const MainContent = () => {
               This is your dashboard where you can manage your application
               content.
             </p>
-            <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>    <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>    <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>    <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>    <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>    <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>    <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>    <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>    <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>
-            <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>
+            <CustomForm/>
 
             <Outlet /> {/* Renders child components here */}
 
