@@ -46,7 +46,7 @@ export const SideNavBar = ({isSidebarOpen, setIsSidebarOpen}) => {
 
     {/* Sidebar Menu */}
     <ul className="flex-1 overflow-y-auto space-y-2 px-4 hide-scrollbar">
-      {menuItems.map((item, index) => (
+      {/* {menuItems.map((item, index) => (
         <li key={index} className="flex items-center hover:bg-red-300 hover:rounded-md hover:text-red-700">
           <Link
             to={item.path}
@@ -60,7 +60,49 @@ export const SideNavBar = ({isSidebarOpen, setIsSidebarOpen}) => {
               {item.label}
             </span>
           </Link>
-        </li>))}
+        </li>))} */}
+        <li className="flex items-center hover:bg-red-300 hover:rounded-md hover:text-red-700">
+          <Link
+            to="/dashboard"
+            className="flex items-center p-2  rounded"
+          >
+            <span className="text-md"><FaHome /></span>
+            <span
+              className={`ml-4 ${isSidebarOpen ? 'block' : 'hidden'
+                } whitespace-nowrap text-sm font-normal`}
+            >
+              Home
+            </span>
+          </Link>
+        </li>
+        <li className="flex items-center hover:bg-red-300 hover:rounded-md hover:text-red-700">
+          <Link
+            to="/dashboard/customForm"
+            className="flex items-center p-2  rounded"
+          >
+            <span className="text-md"><FaUser /></span>
+            <span
+              className={`ml-4 ${isSidebarOpen ? 'block' : 'hidden'
+                } whitespace-nowrap text-sm font-normal`}
+            >
+              Forms
+            </span>
+          </Link>
+        </li>
+        <li className="flex items-center hover:bg-red-300 hover:rounded-md hover:text-red-700">
+          <Link
+            to="/dashboard/menu"
+            className="flex items-center p-2  rounded"
+          >
+            <span className="text-md"><FaChartBar /></span>
+            <span
+              className={`ml-4 ${isSidebarOpen ? 'block' : 'hidden'
+                } whitespace-nowrap text-sm font-normal`}
+            >
+              Menu
+            </span>
+          </Link>
+        </li>
     </ul>
   </div>
   )

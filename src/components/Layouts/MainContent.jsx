@@ -4,7 +4,6 @@ import { FaHome, FaUser, FaCog, FaChartBar } from 'react-icons/fa';
 import {  Outlet } from 'react-router';
 import { SideNavBar } from './SideNavBar';
 import { TopNavBar } from './TopNavBar';
-import CustomForm from '../FormElements/custom-form-elements/CustomForm';
 import { useGetSupplierCategoryQuery } from '../../services/menu';
 
 
@@ -41,12 +40,7 @@ console.log(datas);
         {/* Dashboard Content */}
         <div className="flex-1 px-4 overflow-y-auto">
           <div className="bg-white p-6 shadow rounded">
-            <h2 className="text-xl font-semibold">Welcome to the Admin Panel!</h2>
-            <p className="text-gray-600 mt-2">
-              This is your dashboard where you can manage your application
-              content.
-            </p>
-            <CustomForm/>
+          
 
             <Outlet /> {/* Renders child components here */}
 

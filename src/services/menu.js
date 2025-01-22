@@ -12,25 +12,19 @@ export const menuProductApi = createApi({
                 // const token = getCookie('token')
 
                 return ({
-                    url: 'menu',
-                    method: 'POST',
-                    body: {
-                        // token: token
-                    },
+                    url: 'admin/menu',
+                    method: 'GET',
+                 
                 })
             },
         }),
-        getSupplierCatagory: builder.mutation({
+        menuStatusChange: builder.mutation({
             query: (data) => {
                 // const token = getCookie('token')
-                const jsonString = JSON.stringify(data); // Stringify the object
                 return ({
-                    url: 'own_products/listSupplierCategory',
+                    url: 'admin/menu/change_status',
                     method: 'POST',
-                    body: {
-                        data: jsonString,
-                        // token: token
-                    },
+                    body: data,
                 })
             },
         }),
@@ -38,4 +32,4 @@ export const menuProductApi = createApi({
     }),
 });
 
-export const { useGetSupplierCategoryQuery, useGetSupplierCatagoryMutation } = menuProductApi;
+export const { useGetSupplierCategoryQuery, useMenuStatusChangeMutation } = menuProductApi;
