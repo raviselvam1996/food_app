@@ -2,7 +2,8 @@ import React from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
 import MainContent from '../components/Layouts/MainContent'
 import Settings from '../Setting'
-import Profile from '../Profile'
+import Menu from '../components/Menu/Menu'
+import CustomForm from '../components/FormElements/custom-form-elements/CustomForm'
 
 export const AppRoutes = () => {
   return (
@@ -13,7 +14,8 @@ export const AppRoutes = () => {
       <Route path="dashboard" element={<MainContent />}>
         {/* Child Routes */}
         <Route path="settings" element={<Settings />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="menu" element={<Menu />} />
+        <Route path="customForm" element={<CustomForm/>} />
       </Route>
     </Routes>
   </BrowserRouter>
