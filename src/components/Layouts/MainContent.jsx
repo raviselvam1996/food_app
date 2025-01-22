@@ -5,12 +5,15 @@ import {  Outlet } from 'react-router';
 import { SideNavBar } from './SideNavBar';
 import { TopNavBar } from './TopNavBar';
 import CustomForm from '../FormElements/custom-form-elements/CustomForm';
-
+import { useGetSupplierCategoryQuery } from '../../services/menu';
 
 
 
 const MainContent = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { data: categoriesData, isLoading: loadingCategories, error: categoriesError } = useGetSupplierCategoryQuery()
+const datas = categoriesData;
+console.log(datas);
 
   // const toggleSidebar = () => {
   //   setIsSidebarOpen(!isSidebarOpen);
